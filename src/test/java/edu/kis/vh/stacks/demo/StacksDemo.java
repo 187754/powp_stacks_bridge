@@ -34,3 +34,7 @@ class StacksDemo {
 
 // Punkty 3.1.1 oraz 3.1.2 zostały zrealizowane poprzez zaznaczenie w
 // Preferences/save actions checkboxa Format source code/format all lines
+
+// 3.1.3. - kombinacje klawiszy alt+strzałka w prawo/lewo pozwala na poruszanie
+// się po ostatnio edytowanych plikach w kolejności edytowania (prawo - następny
+// edytowany, lewo - poprzedni edytowany)
