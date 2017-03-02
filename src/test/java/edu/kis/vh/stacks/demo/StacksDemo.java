@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
-class StacksDemo {
+public class StacksDemo {
 
 	private static final int RANDOM_RANGE = 20;
 	private static final int COUNT_OF_NUMBERS = 15;
