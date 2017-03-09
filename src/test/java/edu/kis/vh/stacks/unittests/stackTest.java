@@ -78,3 +78,5 @@ public class stackTest {
 	}
 
 }
+
+// 3.2.1. - Wszystkie testy działają poprawnie- nie ma potrzeby poprawy
