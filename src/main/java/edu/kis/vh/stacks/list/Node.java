@@ -2,8 +2,9 @@ package edu.kis.vh.stacks.list;
 
 public class Node {
 
-	private int value; // wszystkie użycia zmiennej zostały zmienione na użycia
-						// poprzez getter i setter (klasa StackList)
+	private final int value; // wszystkie użycia zmiennej zostały zmienione na
+								// użycia
+	// poprzez getter i setter (klasa StackList)
 	private Node prev;
 	private Node next;// tak samo jak w przypadku value
 

@@ -33,7 +33,7 @@ public class StackList {
 	public int pop() {
 		if (empty())
 			return EMPTY_STACK;
-		int ret = last.getValue();
+		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}

@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 public class StacksDemo {
@@ -11,16 +11,16 @@ public class StacksDemo {
 	private static final int COUNT_OF_STACKS = 3;
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
+		final DefaultStacksFactory factory = new DefaultStacksFactory();
 
-		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
+		final Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
 		for (int i = 1; i < COUNT_OF_NUMBERS; i++)
 			for (int j = 0; j < COUNT_OF_STACKS; j++)
 				stacks[j].push(i);
 
-		java.util.Random rn = new java.util.Random();
+		final java.util.Random rn = new java.util.Random();
 		for (int i = 1; i < COUNT_OF_NUMBERS; i++)
 			stacks[3].push(rn.nextInt(RANDOM_RANGE));
 
@@ -42,3 +42,6 @@ public class StacksDemo {
 // 3.1.3. - kombinacje klawiszy alt+strzałka w prawo/lewo pozwala na poruszanie
 // się po ostatnio edytowanych plikach w kolejności edytowania (prawo - następny
 // edytowany, lewo - poprzedni edytowany)
+
+// Punkty 3.1.10 oraz 3.1.11 zrealizowane poprzez ustawienie w preferences/save
+// actions /additional actions.
