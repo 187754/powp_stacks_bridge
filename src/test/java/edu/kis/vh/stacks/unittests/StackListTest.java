@@ -10,7 +10,7 @@ public class StackListTest {
 	public void testPushElement() {
 		final StackList stackObj = new StackList();
 		final int testValue = 4;
-		stackObj.pushElement(testValue);
+		stackObj.push(testValue);
 
 		final int result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
@@ -20,13 +20,13 @@ public class StackListTest {
 	public void testEmpty() {
 		final StackList stackObj = new StackList();
 		final boolean testResult = true;
-		boolean result = stackObj.empty();
+		boolean result = stackObj.isEmpty();
 		Assert.assertEquals(testResult, result);
 
 		final int testValue = 4;
-		stackObj.pushElement(testValue);
+		stackObj.push(testValue);
 		final boolean testResult2 = false;
-		result = stackObj.empty();
+		result = stackObj.isEmpty();
 		Assert.assertEquals(testResult2, result);
 	}
 
@@ -34,41 +34,41 @@ public class StackListTest {
 	public void testFull() {
 		final StackList stackObj = new StackList();
 		final boolean testResult = false;
-		boolean result = stackObj.full();
+		boolean result = stackObj.isFull();
 		Assert.assertEquals(testResult, result);
 
 		final int testValue = 4;
-		stackObj.pushElement(testValue);
-		result = stackObj.full();
+		stackObj.push(testValue);
+		result = stackObj.isFull();
 		Assert.assertEquals(testResult, result);
 	}
 
 	@Test
 	public void testPeek() {
 		final StackList stackObj = new StackList();
-		int result = stackObj.peek();
+		int result = stackObj.top();
 		final int EMPTY_STACK = -1;
 		Assert.assertEquals(EMPTY_STACK, result);
 		final int testValue2 = 4;
-		stackObj.pushElement(testValue2);
+		stackObj.push(testValue2);
 		final int testValue = 3;
-		stackObj.pushElement(testValue);
-		result = stackObj.peek();
+		stackObj.push(testValue);
+		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
-		result = stackObj.peek();
+		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
 
 	@Test
 	public void testPop() {
 		final StackList stackObj = new StackList();
-		int result = stackObj.peek();
+		int result = stackObj.top();
 		final int EMPTY_STACK = -1;
 		Assert.assertEquals(EMPTY_STACK, result);
 		final int testValue2 = 4;
-		stackObj.pushElement(testValue2);
+		stackObj.push(testValue2);
 		final int testValue = 3;
-		stackObj.pushElement(testValue);
+		stackObj.push(testValue);
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.pop();

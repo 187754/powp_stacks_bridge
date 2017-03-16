@@ -40,7 +40,7 @@ public class StackTest {
 		}
 
 		final boolean result = stackObj.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);//zmienione dla użycia implementacji klasy StackList
 	}
 
 	@Test

@@ -1,42 +1,53 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 /**
  * Klasa reprezentująca stos w wariancie opartym na tablicy
  *
  */
-public class Stack {
+public class Stack implements IStackInterface {
 	
-	public Stack(StackArray stackArray) {
+	private IStackInterface stack;
+	
+	
+	public Stack(StackList stack) {
 		super();
-		this.stackArray = stackArray;
+		this.stack = stack;
 	}
 
 	public Stack(){
-		this.stackArray = new StackArray();
-	}
-	private StackArray stackArray;
-	public int getTotal() {
-		return stackArray.getTotal();
+		this.stack = new StackList();
 	}
 
+	@Override
+	public int getTotal() { 
+		return stack.getTotal();
+	}
+
+	@Override
 	public void push(int i) {
-		stackArray.push(i);
+		stack.push(i);
 	}
 
+	@Override
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stack.isEmpty();
 	}
 
+	@Override
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stack.isFull();
 	}
 
+	@Override
 	public int top() {
-		return stackArray.top();
+		return stack.top();
 	}
 
+	@Override
 	public int pop() {
-		return stackArray.pop();
+		return stack.pop();
 	}
 
 
