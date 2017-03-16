@@ -11,7 +11,7 @@ public class Stack implements IStackInterface {
 	private IStackInterface stack;
 	
 	
-	public Stack(StackList stack) {
+	public Stack(IStackInterface stack) {
 		super();
 		this.stack = stack;
 	}

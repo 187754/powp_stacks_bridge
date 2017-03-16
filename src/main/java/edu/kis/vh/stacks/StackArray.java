@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+public class StackArray implements IStackInterface{
 
 	/**
 	 * ilość elementów pełnego stosu
@@ -28,6 +28,7 @@ public class StackArray {
 	/**
 	 * @return zwraca ilość elementów, które znajdują się na stosie
 	 */
+	@Override
 	public int getTotal() {
 		return total;
 	}
@@ -38,6 +39,7 @@ public class StackArray {
 	 * @param i
 	 *            wartość elementu, który ma zostać odłożony na stos
 	 */
+	@Override
 	public void push(int i) {
 		if (!isFull())
 			items[++total] = i;
@@ -48,6 +50,7 @@ public class StackArray {
 	 * 
 	 * @return true - gdy stos jest pusty, false w przeciwnym wypadku
 	 */
+	@Override
 	public boolean isEmpty() {
 		return total == EMPTY_STACK;
 	}
@@ -57,6 +60,7 @@ public class StackArray {
 	 * 
 	 * @return true gdy stos jest pełen, false w przeciwnym wypadku
 	 */
+	@Override
 	public boolean isFull() {
 		return total == FULL_STACK_INDICATOR;
 	}
@@ -68,6 +72,7 @@ public class StackArray {
 	 *         elementu ze szczytu stosu
 	 *
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK;
@@ -81,9 +86,12 @@ public class StackArray {
 	 *         elementu ze szczytu stosu
 	 * 
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK;
 		return items[total--];
 	}
 }
+//IStackInterface stworzony przy realizacji punktu 3.1.4.
+// Punkt 3.1.6. również został zrealizowany przy punkcie 3.1.4. z wyjątkiem typu parametru w konstruktorze 
