@@ -2,26 +2,21 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.list.StackList;
 
-/**
- * Klasa reprezentująca stos w wariancie opartym na tablicy
- *
- */
 public class Stack implements IStackInterface {
-	
+
 	private IStackInterface stack;
-	
-	
+
 	public Stack(IStackInterface stack) {
 		super();
 		this.stack = stack;
 	}
 
-	public Stack(){
+	public Stack() {
 		this.stack = new StackList();
 	}
 
 	@Override
-	public int getTotal() { 
+	public int getTotal() {
 		return stack.getTotal();
 	}
 
@@ -50,9 +45,7 @@ public class Stack implements IStackInterface {
 		return stack.pop();
 	}
 
-
-
-
-	
-
 }
+// konsekwencją zmiany z punktu 3.1.6. jest możliwość użycia w klasie Stack
+// implementacji stostu z klas StackList oraz StackArray bez konieczności zmian
+// w klasie Stack
