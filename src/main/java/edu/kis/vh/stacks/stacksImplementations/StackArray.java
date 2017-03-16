@@ -1,4 +1,6 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.stacksImplementations;
+
+import edu.kis.vh.stacks.IStackInterface;
 
 public class StackArray implements IStackInterface{
 
