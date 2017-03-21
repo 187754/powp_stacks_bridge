@@ -1,20 +1,12 @@
 package edu.kis.vh.stacks.stacksImplementations;
 
-import edu.kis.vh.stacks.IStackInterface;
-
-public class StackArray implements IStackInterface{
+public class StackArray implements IStackInterface {
 
 	/**
 	 * ilość elementów pełnego stosu
 	 * 
 	 */
 	private static final int FULL_STACK_INDICATOR = 11;
-
-	/**
-	 * wartość zwracana, gdy stos jest pusty
-	 * 
-	 */
-	private static final int EMPTY_STACK = -1;
 
 	/**
 	 * tablica przechowująca elementy stosu
@@ -95,5 +87,6 @@ public class StackArray implements IStackInterface{
 		return items[total--];
 	}
 }
-//IStackInterface stworzony przy realizacji punktu 3.1.4.
-// Punkt 3.1.6. również został zrealizowany przy punkcie 3.1.4. z wyjątkiem typu parametru w konstruktorze 
+// IStackInterface stworzony przy realizacji punktu 3.1.4.
+// Punkt 3.1.6. również został zrealizowany przy punkcie 3.1.4. z wyjątkiem typu
+// parametru w konstruktorze

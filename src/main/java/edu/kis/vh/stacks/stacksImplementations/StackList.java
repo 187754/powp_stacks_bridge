@@ -1,7 +1,5 @@
 package edu.kis.vh.stacks.stacksImplementations;
 
-import edu.kis.vh.stacks.IStackInterface;
-
 public class StackList implements IStackInterface{
 	private class Node {
 
@@ -38,7 +36,6 @@ public class StackList implements IStackInterface{
 
 	}
 
-	private static final int EMPTY_STACK = -1;
 	private Node last;
 	int i;
 	int total = 0;
@@ -68,14 +65,14 @@ public class StackList implements IStackInterface{
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return IStackInterface.EMPTY_STACK;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return IStackInterface.EMPTY_STACK;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		total--;

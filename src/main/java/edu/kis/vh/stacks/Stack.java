@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stacksImplementations.IStackInterface;
 import edu.kis.vh.stacks.stacksImplementations.StackList;
 
 public class Stack implements IStackInterface {
