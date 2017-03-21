@@ -16,3 +16,8 @@ public interface IStackInterface {
 	public int pop();
 }
 // realizacja zadania 3.1.10 pomogła w realizacji zadania 3.1.11
+
+// 3.1.13:
+// F3 przenosi do deklaracji metody, ctrl+t wyświetla hierachię implementacji
+// danej metody wraz z korzeniem i wszystkimi implementacjami, zaś myszka + ctrl
+// pozwala na wybór dowolnej z wymienionych wcześniej opcji
