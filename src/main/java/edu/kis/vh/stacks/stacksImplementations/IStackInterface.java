@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks.stacksImplementations;
 
 public interface IStackInterface {
-	static final int EMPTY_STACK = -1;
+	static final int EMPTY_STACK = 0;
 
 	public int getTotal();
 
@@ -15,3 +15,4 @@ public interface IStackInterface {
 
 	public int pop();
 }
+// realizacja zadania 3.1.10 pomogła w realizacji zadania 3.1.11
