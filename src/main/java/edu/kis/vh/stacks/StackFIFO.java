@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.stacksImplementations.IStackInterface;
+import edu.kis.vh.stacks.stacksImplementations.StackArray;
 
 public class StackFIFO extends Stack {
 
@@ -14,7 +15,7 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	private final Stack temp = new Stack();
+	private final StackArray temp = new StackArray();
 
 	@Override
 	public int pop() {
@@ -31,3 +32,7 @@ public class StackFIFO extends Stack {
 		return ret;
 	}
 }
+
+// wybrałem StackArray, ponieważ będzie miał szybsze działanie niż ListArray,
+// gdyż nie będzie potrzeby tworzenia za każdym razem dodatkowego elementu, a
+// jedynie będzie wstawiana wartość
