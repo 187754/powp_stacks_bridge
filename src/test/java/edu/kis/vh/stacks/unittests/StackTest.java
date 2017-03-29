@@ -40,13 +40,14 @@ public class StackTest {
 		}
 
 		final boolean result = stackObj.isFull();
-		Assert.assertEquals(false, result);//zmienione dla użycia implementacji klasy StackList
+		Assert.assertEquals(false, result);// zmienione dla użycia implementacji
+											// klasy StackList
 	}
 
 	@Test
 	public void testTop() {
 		final Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = stackObj.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -60,10 +61,11 @@ public class StackTest {
 		Assert.assertEquals(testValue, result);
 	}
 
+	// błąd testu wynikał z punktu 11
 	@Test
 	public void testPop() {
 		final Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -76,7 +78,7 @@ public class StackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
-
+	// błąd testu wynika z punktu 11
 }
 
 // 3.2.1. - Wszystkie testy działają poprawnie- nie ma potrzeby poprawy

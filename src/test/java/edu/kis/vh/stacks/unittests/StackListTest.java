@@ -47,7 +47,7 @@ public class StackListTest {
 	public void testPeek() {
 		final StackList stackObj = new StackList();
 		int result = stackObj.top();
-		final int EMPTY_STACK = -1;
+		final int EMPTY_STACK = 0;
 		Assert.assertEquals(EMPTY_STACK, result);
 		final int testValue2 = 4;
 		stackObj.push(testValue2);
@@ -58,12 +58,13 @@ public class StackListTest {
 		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
+	// błąd testu wynika z punktu 11
 
 	@Test
 	public void testPop() {
 		final StackList stackObj = new StackList();
 		int result = stackObj.top();
-		final int EMPTY_STACK = -1;
+		final int EMPTY_STACK = 0;
 		Assert.assertEquals(EMPTY_STACK, result);
 		final int testValue2 = 4;
 		stackObj.push(testValue2);
@@ -74,4 +75,5 @@ public class StackListTest {
 		result = stackObj.pop();
 		Assert.assertEquals(testValue2, result);
 	}
+	// błąd testu wynika z punktu 11
 }
