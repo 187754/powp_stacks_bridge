@@ -2,6 +2,7 @@ package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 public class StacksDemo {
@@ -12,12 +13,33 @@ public class StacksDemo {
 
 	public static void main(String[] args) {
 		final DefaultStacksFactory factory = new DefaultStacksFactory();
-
+		final ArrayStacksFactory factoryArray = new ArrayStacksFactory();
 		testStacks(factory);
-
+		testStacksArray(factoryArray);
 	}
 
 	private static void testStacks(final DefaultStacksFactory factory) {
+		final Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
+				factory.getHanoiStack() };
+
+		for (int i = 1; i < COUNT_OF_NUMBERS; i++)
+			for (int j = 0; j < COUNT_OF_STACKS; j++)
+				stacks[j].push(i);
+
+		final java.util.Random rn = new java.util.Random();
+		for (int i = 1; i < COUNT_OF_NUMBERS; i++)
+			stacks[3].push(rn.nextInt(RANDOM_RANGE));
+
+		for (int i = 0; i < stacks.length; i++) {
+			while (!stacks[i].isEmpty())
+				System.out.print(stacks[i].pop() + "  ");
+			System.out.println();
+		}
+
+		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+	}
+
+	private static void testStacksArray(final ArrayStacksFactory factory) {
 		final Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
