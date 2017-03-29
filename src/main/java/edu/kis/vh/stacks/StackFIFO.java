@@ -36,3 +36,8 @@ public class StackFIFO extends Stack {
 // wybrałem StackArray, ponieważ będzie miał szybsze działanie niż ListArray,
 // gdyż nie będzie potrzeby tworzenia za każdym razem dodatkowego elementu, a
 // jedynie będzie wstawiana wartość
+
+// 3.1.17. zasadę izolacji łamie klasa StackFIFO, gdyż przechowuje obiekt temp
+// typu StackArray, co czyni ją zależną od implementacji. Aby to rozwiązać można
+// przekazywać parametr do konstruktora w którym wybierana byłaby klasa z której
+// ma korzystać temp
